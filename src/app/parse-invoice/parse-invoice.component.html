@@ -1,0 +1,8 @@
+<h1>Please Upload the file you want to convert</h1>
+<input id="file-upload" type="file" accept=".txt" #fileupload (change)="fileUpload($event)">
+<button type="button" *ngIf="textArray.length" (click)="saveFile()">save output Data</button>
+
+<h1  *ngIf="textArray.length"> Output Data </h1>
+<div *ngFor="let ele of textArray; let i = index">
+    <p>{{i+1}} - {{ele}}</p>
+</div>

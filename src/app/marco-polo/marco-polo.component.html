@@ -1,0 +1,6 @@
+<label>Please enter the number</label>
+<input id="number" type="number" #inputNumber>
+<button type="button" (click)="onChange(inputNumber.value)">Generate</button>
+
+<h1 *ngIf="convertedValue"> Output Data </h1>
+<p>{{convertedValue}}</p>
